@@ -1,10 +1,12 @@
 class LibrosController < ApplicationController
   before_action :set_libro, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_admin!
   # GET /libros
   # GET /libros.json
   def index
+
     @libros = Libro.all
+
   end
 
   # GET /libros/1
@@ -14,16 +16,22 @@ class LibrosController < ApplicationController
 
   # GET /libros/new
   def new
+
     @libro = Libro.new
+    
+    
   end
 
   # GET /libros/1/edit
   def edit
+
+
   end
 
   # POST /libros
   # POST /libros.json
   def create
+
     @libro = Libro.new(libro_params)
 
     respond_to do |format|
@@ -35,11 +43,14 @@ class LibrosController < ApplicationController
         format.json { render json: @libro.errors, status: :unprocessable_entity }
       end
     end
+    
+    
   end
 
   # PATCH/PUT /libros/1
   # PATCH/PUT /libros/1.json
   def update
+
     respond_to do |format|
       if @libro.update(libro_params)
         format.html { redirect_to @libro, notice: 'Libro was successfully updated.' }
@@ -49,16 +60,21 @@ class LibrosController < ApplicationController
         format.json { render json: @libro.errors, status: :unprocessable_entity }
       end
     end
+    
+    
   end
 
   # DELETE /libros/1
   # DELETE /libros/1.json
   def destroy
+
     @libro.destroy
     respond_to do |format|
       format.html { redirect_to libros_url, notice: 'Libro was successfully destroyed.' }
       format.json { head :no_content }
     end
+
+    
   end
 
   private
@@ -71,4 +87,4 @@ class LibrosController < ApplicationController
     def libro_params
       params.require(:libro).permit(:titulo, :autor, :fecha_pub, :cod_dewey)
     end
-end
+  end

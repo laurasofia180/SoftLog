@@ -30,4 +30,10 @@
 
 <br>
 
+<% if admin_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_admin_session_path, :method => :delete) %>        
+  </li>
+<% end %>
+
 <%= link_to 'New Libro', new_libro_path %>

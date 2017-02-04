@@ -1,19 +1,60 @@
-<form accept-charset="UTF-8" action="/" method="post">
-  <input name="utf8" type="hidden" value="&#x2713;" />
- <input name="authenticity_token" type="hidden" value="J7CBxfHalt49OSHp27hblqK20c9PgwJ108nDHX/8Cts=" />
-</form>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">SoftLog</a>
+    </div>
 
-<h1> SoftLog </h1>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <button type="button" class="btn btn-default navbar-btn"><%= link_to "Admin", '/libros', :method => :get %>
+</button>
 
-<p>
-<%= label_tag(:nom_usuario, "Usuario") %>
-<%= password_field_tag(:password) %>
-</p>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
-<p>
-<%= label_tag(:pass_usuario, "Contraseña") %>
-<%= password_field_tag(:password) %>
-</p>
+<div class="row container">
+	<div class="col-md-6 col-md-offset-4">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Titulo</th>
+					<th>Autor</th>
+					<th>Fecha pub</th>
+					<th>Cod dewey</th>
+					<th colspan="3"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% @libros.each do |libro| %>
+				<tr>
+					<td><%= libro.titulo %></td>
+					<td><%= libro.autor %></td>
+					<td><%= libro.fecha_pub %></td>
+					<td><%= libro.cod_dewey %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
 
 
-<button type="button">Acepta</button>
+	</div>
+</div>
+
+
+
+

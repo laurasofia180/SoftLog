@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+v1 = Libros.create({"titulo"=> 'The little Prince',"autor"=> 'Antoine de Saint-Exupéry',"fecha_pub"=> 1943,"cod_dewey" => '843.912'})

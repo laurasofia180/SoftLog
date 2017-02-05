@@ -41,3 +41,10 @@ libro11.save
 
 libro12=Libro.new(titulo: '1984',autor:'George Orwell',fecha_pub: 1949,cod_dewey:'9788423342310')
 libro12.save
+
+#admin
+admin = Admin.new
+admin.email = 'admin@admin.com'
+admin.password = 'admin123'
+admin.password_confirmation = 'admin123'
+admin.save!

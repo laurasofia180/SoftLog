@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Proyecto 1
 
-Things you may want to cover:
+#### Descripción
 
-* Ruby version
+Esta aplicación es una plataforma base para una biblioteca donde los usuarios pueden ver los libros disponibles y si es administrador tiene la posibilidad de agregar, eliminar o modificar libros.
 
-* System dependencies
+* Ruby 2.4.0
+* MySQL 5.7
 
-* Configuration
+#### Uso
 
-* Database creation
+###### gems especiales
 
-* Database initialization
+* mysql2: para la base de datos 
+* devise: manejo de login
 
-* How to run the test suite
+###### Prerequisitos
 
-* Services (job queues, cache servers, search engines, etc.)
+* mysql instalado con user: root y password: root
 
-* Deployment instructions
+###### Instalación 
 
-* ...
+`git clone https://github.com/laurasofia180/SoftLog.git`
+
+`cd SoftLog/proyecto1`
+
+`bundle install`

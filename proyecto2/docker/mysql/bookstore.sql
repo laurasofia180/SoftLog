@@ -1,0 +1,18 @@
+DROP TABLE IF EXISTS `libros`;
+CREATE TABLE IF NOT EXISTS `libros` (
+  `libros` NVARCHAR(50) NOT NULL,
+  `titulo` NVARCHAR(50) NOT NULL,
+  `autor` NVARCHAR(50) NOT NULL,
+  `fecha_pub` NVARCHAR(50) NOT NULL,
+  `cod_dewey` NVARCHAR(50) NOT NULL)
+DEFAULT CHARACTER SET utf8
+COLLATE utf8_general_ci
+ENGINE = InnoDB;
+
+DROP TABLE IF EXISTS `admins`;
+CREATE TABLE IF NOT EXISTS `admins` (
+  `email` NVARCHAR(50) NOT NULL,
+  `encrypted_password` NVARCHAR(50) NOT NULL)
+DEFAULT CHARACTER SET utf8
+COLLATE utf8_general_ci
+ENGINE = InnoDB;

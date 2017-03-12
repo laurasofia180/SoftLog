@@ -1,6 +1,6 @@
 FROM mysql
 
-UN apt-get -y update && apt-get -y upgrade && apt-get install net-tools
+RUN apt-get -y update && apt-get -y upgrade && apt-get install net-tools
 
 ADD bookstore.sql /home/bookstore/bookstore.sql
 ADD data.sql /home/bookstore/data.sql

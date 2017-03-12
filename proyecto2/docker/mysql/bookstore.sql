@@ -1,6 +1,5 @@
 DROP TABLE IF EXISTS `libros`;
 CREATE TABLE IF NOT EXISTS `libros` (
-  `libros` NVARCHAR(50) NOT NULL,
   `titulo` NVARCHAR(50) NOT NULL,
   `autor` NVARCHAR(50) NOT NULL,
   `fecha_pub` NVARCHAR(50) NOT NULL,

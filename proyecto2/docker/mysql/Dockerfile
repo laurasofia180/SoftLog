@@ -1,10 +1,3 @@
 FROM mysql
 
 RUN apt-get -y update && apt-get -y upgrade && apt-get install net-tools
-
-ADD bookstore.sql /home/bookstore/bookstore.sql
-ADD data.sql /home/bookstore/data.sql
-ADD initdb.sh /home/bookstore/initdb.sh
-RUN chmod 644 /home/bookstore/bookstore.sql
-RUN chmod 644 /home/bookstore/data.sql
-RUN chmod 755 /home/bookstore/initdb.sh

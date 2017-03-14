@@ -10,13 +10,13 @@ default: &default
   reconnect: false
   pool: 5
   username: 'root'
-  password: ''
-  host: 127.0.0.1
-  port: 3306
+  password: '1234'
+  host: <=% ENV['MYSQL_HOST']%>
+  port: <=% ENV['MYSQL_PORT']%>
 
 development:
   <<: *default
-  database: libros_development
+  database: bookstore
 
 test:
   <<: *default

@@ -43,8 +43,32 @@ libro12=Libro.new(titulo: '1984',autor:'George Orwell',fecha_pub: 1949,cod_dewey
 libro12.save
 
 #admin
-admin = Admin.new
-admin.email = 'admin@admin.com'
-admin.password = 'admin123'
-admin.password_confirmation = 'admin123'
-admin.save!
+admin1 = Admin.new
+admin1.email = Rails.application.secrets.useremail1
+admin1.password = Rails.application.secrets.userpass1
+admin1.password_confirmation = Rails.application.secrets.userpass1
+admin1.save!
+
+admin2 = Admin.new
+admin2.email = Rails.application.secrets.useremail2
+admin2.password = Rails.application.secrets.userpass2
+admin2.password_confirmation = Rails.application.secrets.userpass2
+admin2.save!
+
+admin3 = Admin.new
+admin3.email = Rails.application.secrets.useremail3
+admin3.password = Rails.application.secrets.userpass3
+admin3.password_confirmation = Rails.application.secrets.userpass3
+admin3.save!
+
+
+
+
+
+
+
+
+
+
+
+

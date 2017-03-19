@@ -1,4 +1,5 @@
 
+```
 docker build -t user1-mysql ./mysql
 
 docker build -t user1-rails ./rails
@@ -16,3 +17,5 @@ docker exec -it rails-test rails db:create
 docker exec -it rails-test rails db:migrate
 
 docker exec -it rails-test rails db:seed
+
+```
